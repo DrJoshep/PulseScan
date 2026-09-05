@@ -1,0 +1,17 @@
+# PulseScan configuration
+
+watchlist:
+  - BTCUSDT
+  - ETHUSDT
+  - BNBUSDT
+  - SOLUSDT
+
+lookback_periods: 50   # number of recent candles used to build each asset's "normal" distribution
+interval: "1h"
+
+thresholds:
+  anomaly_zscore: 2.0            # flag a return more than this many std devs from normal
+  correlation_break: 0.30        # flag if rolling correlation shifts by more than this vs. full-window correlation
+
+report:
+  title: "Market Anomaly & Correlation Report"
